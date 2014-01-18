@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SmartCarActivity" >
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:ems="10"
+        android:text="192.168.1.2" />
+
+    <Button
+        android:id="@+id/buttonConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText1"
+        android:layout_alignBottom="@+id/editText1"
+        android:layout_toRightOf="@+id/editText1"
+        android:text="Connect" />
+
+    <Button
+        android:id="@+id/buttonLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/buttonFwd"
+        android:text="Left" />
+
+    <Button
+        android:id="@+id/buttonBw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonRight"
+        android:layout_toRightOf="@+id/buttonLeft"
+        android:text="Backward" />
+
+    <Button
+        android:id="@+id/buttonFwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText1"
+        android:layout_toLeftOf="@+id/buttonRight"
+        android:layout_toRightOf="@+id/buttonLeft"
+        android:text="Forward" />
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttoLeft"
+        android:layout_alignBottom="@+id/buttonLeft"
+        android:layout_alignLeft="@+id/buttonBw"
+        android:layout_alignRight="@+id/buttonBw"
+        android:text="STOP" />
+
+    <Button
+        android:id="@+id/buttonRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonStop"
+        android:layout_alignBottom="@+id/buttonStop"
+        android:layout_toRightOf="@+id/buttonBw"
+        android:text="Right" />
+<com.example.smartcar.MjpegView
+		android:id="@+id/mv"
+        android:layout_width="fill_parent"
+        android:layout_height="400dip"
+		android:layout_weight="1"
+		android:layout_toRightOf="@+id/buttonConnect"
+        />
+</RelativeLayout>
